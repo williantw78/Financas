@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Controlo Financeiro</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Controlo Financeiro</h1>
+	<h5>Versão 4.0 </h5>
+	<br>
+	
+    <!-- RESUMO -->
+
+    <div class="summary-card">
+
+      <div class="month-selector">
+
+        <label for="summaryMonth">
+          Visualizar Mês
+        </label>
+
+        <select id="summaryMonth"></select>
+
+      </div>
+
+      <div class="summary-item">
+
+        <h3>Total a Pagar</h3>
+
+        <p id="totalToPay">
+          € 0,00
+        </p>
+
+      </div>
+
+      <hr>
+
+      <div class="summary-item">
+
+        <h3>Total a Receber</h3>
+
+        <p id="totalToReceive" class="positive">
+          € 0,00
+        </p>
+
+      </div>
+
+      <hr>
+
+      <div class="summary-item">
+
+        <h3>Resultado do Mês</h3>
+
+        <p id="monthBalance">
+          € 0,00
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- BOTÕES -->
+
+    <div class="actions">
+
+      <button onclick="addService()">
+        + Serviço
+      </button>
+
+      <button onclick="addMonth()">
+        + Mês
+      </button>
+
+      <button onclick="addIncome()">
+        + Receita
+      </button>
+
+    </div>
+
+    <!-- TABELA -->
+
+    <div class="table-wrapper">
+
+      <table>
+
+        <thead>
+
+          <tr id="headerRow">
+
+            <th>Serviço</th>
+            <th>Responsável</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody id="servicesBody"></tbody>
+
+        <tfoot>
+
+          <tr id="totalRow">
+
+            <td colspan="2">
+              Total
+            </td>
+
+          </tr>
+
+        </tfoot>
+
+      </table>
+
+    </div>
+
+    <!-- RECEITAS -->
+
+    <div class="income-section">
+
+      <h2>Receitas</h2>
+
+      <div class="table-wrapper">
+
+        <table>
+
+          <thead>
+
+            <tr>
+
+              <th>Descrição</th>
+              <th>Responsável</th>
+              <th>Valor</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody id="incomeBody"></tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
